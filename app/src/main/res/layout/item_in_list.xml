@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/back_item_image"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#DAB3C0"
+        android:backgroundTintMode="multiply"
+        >
+        <ImageView
+            android:id="@+id/imageItem"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/back_item_image"
+            android:src="@drawable/shoe1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/companyItem"
+            android:fontFamily="@font/roboto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/back_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageItem"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Men Sport Shoec" />
+        <TextView
+            android:id="@+id/nameItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_item"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toEndOf="@id/companyItem"
+            app:layout_constraintStart_toStartOf="@+id/companyItem"
+            app:layout_constraintTop_toBottomOf="@+id/companyItem"
+            tools:text="Men Sport" />
+        <TextView
+            android:id="@+id/sizeShoeList"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:background="@drawable/back_item_size"
+            app:layout_constraintTop_toTopOf="@id/imageItem"
+            app:layout_constraintStart_toStartOf="@id/imageItem"
+            tools:text="43" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

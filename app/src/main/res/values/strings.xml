@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shoe">Shoe</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email">Email</string>
+    <string name="welcome">Welcome</string>
+    <string name="next">next</string>
+    <string name="we_hope_you_like_our_products">We hope you like our products.</string>
+    <string name="click_on_next_to_go_to_instruction"> Click on next to go to instruction.</string>
+    <string name="instructions">Instructions</string>
+    <string name="click_on_the_button_to_add_a_new_shoe_to_the_list_if_you_want_to_return_to_the_login_page_click_on_the_word_logout">Click on the button to add a new shoe to the list. If you want to return to the login page, click on the word logout.</string>
+    <string name="click_on_select_shoes_button_to_choose_shoes_you_want_to_add_then_enter_the_name_of_the_shoes_then_enter_the_name_of_the_company_then_enter_the_size_of_the_shoes_then_write_a_description_of_the_shoes_then_press_the_save_button_to_add_the_shoes_to_the_list_or_the_cancel_button_to_cancel_the_addition">Click on select shoes button to choose shoes you want to add, then enter the name of the shoes,then enter the name of the company, then enter the size of the shoes, then write a description of the shoes then press the save button to add the shoes to the list, or the cancel button to cancel the addition. Shoe size should be greater than 35 and smaller than 46</string>
+    <string name="select_shoe">Select shoe</string>
+    <string name="shoe_name">shoe name</string>
+    <string name="name">Name</string>
+    <string name="shoe_company">shoe company</string>
+    <string name="company">Company</string>
+    <string name="size">Size</string>
+    <string name="shoe_size">shoe size</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

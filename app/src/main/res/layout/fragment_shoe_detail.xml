@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".showShoes.ShoeDetailFragment"
+        >
+        <Button
+            android:id="@+id/selectShoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/sign_in"
+            android:fontFamily="@font/roboto"
+            android:text="@string/select_shoe"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toRightOf="@id/shoeImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/sign_in"
+            android:onClick="@{()-> shoeViewModel.saveShoeDetailStart()}"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/buttonCancel"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeDescription" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/sign_in"
+            android:text="@string/cancel"
+            android:fontFamily="@font/roboto"
+            android:textAllCaps="false"
+            android:onClick="@{()-> shoeViewModel.cancelShoeDetailStart()}"
+            android:textColor="@color/white"
+            android:layout_marginRight="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/buttonSave"
+            app:layout_constraintTop_toBottomOf="@id/shoeDescription" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/red"
+            android:hint="@string/shoe_name"
+            android:text="@={shoe.name}"
+            android:fontFamily="@font/roboto"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/shoeNameText"
+            app:layout_constraintTop_toBottomOf="@id/shoeImage" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/red"
+            android:hint="@string/shoe_company"
+            android:inputType="text"
+            android:fontFamily="@font/roboto"
+            android:text="@={shoe.company}"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/shoeCompanyText"
+            app:layout_constraintTop_toBottomOf="@id/shoeNameText" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/red"
+            android:hint="@string/shoe_size"
+            android:fontFamily="@font/roboto"
+            android:text="@={shoe.size}"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/shoeSizeText"
+            app:layout_constraintTop_toBottomOf="@id/shoeCompanyText" />
+
+        <EditText
+            android:id="@+id/shoeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/description_show"
+            android:gravity="top"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/description"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="140dp"
+            android:padding="8dp"
+            android:text="@={shoe.description}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeSizeText" />
+
+        <ImageView
+            android:id="@+id/shoeImage"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:src="@drawable/shoe1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shoeNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/name"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/red"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeImage" />
+
+        <TextView
+            android:id="@+id/shoeCompanyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:maxLines="1"
+            android:text="@string/company"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/red"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeNameText" />
+
+        <TextView
+            android:id="@+id/shoeSizeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/size"
+            android:textColor="@color/red"
+            android:fontFamily="@font/roboto"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeCompanyText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <variable
+            name="shoeViewModel"
+            type="com.example.shoestore.ShoeViewModel" />
+
+        <variable
+            name="shoe"
+            type="com.example.shoestore.model.Shoe" />
+
+    </data>
+</layout>
